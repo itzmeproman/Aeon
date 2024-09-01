@@ -42,7 +42,7 @@ stream_handler.setFormatter(formatter)
 
 basicConfig(handlers=[file_handler, stream_handler], level=INFO)
 
-CONFIG_FILE_URL = "https://github.com/itzmeproman/Aeon/edit/main/config.env"
+CONFIG_FILE_URL = "https://github.com/itzmeproman/Aeon/main/config.env"
 try:
     if len(CONFIG_FILE_URL) == 0:
         raise TypeError
