@@ -1,4 +1,4 @@
-FROM itzmeproman/Aeon:latest
+FROM itzmeproman/aeon:latest
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
