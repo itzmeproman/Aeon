@@ -42,7 +42,7 @@ stream_handler.setFormatter(formatter)
 
 basicConfig(handlers=[file_handler, stream_handler], level=INFO)
 
-CONFIG_FILE_URL = "https://github.com/itzmeproman/Aeon/blob/main/config.env" 
+CONFIG_FILE_URL = "" 
 try:
     if len(CONFIG_FILE_URL) == 0:
         raise TypeError
@@ -60,14 +60,14 @@ except Exception:
 
 load_dotenv("config.env", override=True)
 
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
+BOT_TOKEN = environ.get("BOT_TOKEN", "6514997130:AAHWCbnzoZh8wbpvjYK9-Se2rh1IvMpVsRk")
 if len(BOT_TOKEN) == 0:
     error("BOT_TOKEN variable is missing! Exiting now")
     sys.exit(1)
 
 bot_id = BOT_TOKEN.split(":", 1)[0]
 
-DATABASE_URL = environ.get("DATABASE_URL", "")
+DATABASE_URL = environ.get("DATABASE_URL", "mongodb+srv://itzmeproman:itzmeproman@itzmeproman.ys0oymt.mongodb.net/?retryWrites=true&w=majority")
 if len(DATABASE_URL) == 0:
     DATABASE_URL = None
 
