@@ -60,14 +60,14 @@ except Exception:
 
 load_dotenv("config.env", override=True)
 
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
+BOT_TOKEN = environ.get("BOT_TOKEN", "6936427405:AAFzNCPGQJD1AmTUM06-YuejKvqTrkCArYA")
 if len(BOT_TOKEN) == 0:
     error("BOT_TOKEN variable is missing! Exiting now")
     sys.exit(1)
 
 bot_id = BOT_TOKEN.split(":", 1)[0]
 
-DATABASE_URL = environ.get("DATABASE_URL", "")
+DATABASE_URL = environ.get("DATABASE_URL", "mongodb+srv://sai:sai@cluster0.ayo8gc4.mongodb.net/?retryWrites=true&w=majority")
 if len(DATABASE_URL) == 0:
     DATABASE_URL = None
 
@@ -81,7 +81,7 @@ if DATABASE_URL:
 
 UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "")
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = "https://github.com/5hojib/Aeon"
+    UPSTREAM_REPO = "https://github.com/Itzmeproman/Aeon"
 
 UPSTREAM_BRANCH = environ.get("UPSTREAM_BRANCH", "")
 if len(UPSTREAM_BRANCH) == 0:
